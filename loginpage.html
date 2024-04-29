@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+
+      :root {
+        --primary-bg-color: #f7f7f7;
+        --primary-text-color: #1d1d1b;
+        --highlight-color: #a0dfd6;
+        --hover-highlight-color: #9dffff;
+        --dark-primary-bg-color: #1d1d1b;
+        --dark-primary-text-color: #f7f7f7;
+        --dark-highlight-color: #3d5afe;
+        --dark-hover-highlight-color: #536dfe;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fffff0;
+    background-position: center;
+    color: var(--font-color, black);
+  }
+
+
+      .container a{
+        text-decoration: none;
+        font-weight: bold;
+        color: #536dfe;
+      }
+
+      .login-container {
+        width: 300px;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .container h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #536dfe;
+    margin-bottom: 20px;
+  }
+
+
+      h2 {
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 16px;
+        border-radius: 8px;
+      }
+
+      button {
+        background-color: #536dfe;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 8px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      button:hover {
+        background-color: #4caf50;
+        transform: scale(1.05);
+      }
+
+      .dark-mode-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        font-size: 25px; /* Bigger icon */
+      }
+
+      .dark-mode-toggle:hover {
+        transform: scale(1.2);
+      }
+
+      .logo-container {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .logo {
+        height: 100px;
+        margin-right: 10px;
+      }
+
+      .logo-container:hover {
+        transform: scale(1.1);
+      }
+
+      /* Dark Mode Styles */
+      .dark-mode {
+        --bg-color: #333;
+        --font-color: white;
+        background-color:  #1d1d1b; /* Darker background when dark mode is enabled */
+      }
+
+      .dark-mode .login-container {
+        background-color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="homepage.html" class="logo-container">
+        <img src="logo.png" alt="Project Pivot Logo" class="logo" />
+        <span style="font-size: 1.2em">Project Pivot</span>
+      </a>
+      <h1 style="
+      text-align: center;
+      font-size: 2.5em;
+      margin-top: 0px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #536dfe;
+    ">Login</h1>
+      <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+      <div class="login-container">
+        <div class="login-form">
+          <form action="/login" method="POST">
+            <label for="email">Email:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              title="Please enter a valid email address"
+            />
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{6,}"
+              title="Please enter a valid password with at least 6 characters, one uppercase letter, one lowercase letter, one number, and one special character"
+            />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+        <div class="forgot-password">
+          <a href="forgotpass.html">Forgot password?</a>
+        </div>
+        <div class="register-now">
+          <p>
+            Don't have an account? <a href="registration.html">Register now</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleDarkMode() {
+        const container = document.querySelector(".container");
+        if (container.classList.contains("dark-mode")) {
+          container.classList.remove("dark-mode");
+        } else {
+          container.classList.add("dark-mode");
+        }
+      }
+    </script>
+  </body>
+</html>

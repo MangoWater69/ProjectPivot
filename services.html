@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      :root {
+        --primary-bg-color: #f7f7f7;
+        --primary-text-color: #1d1d1b;
+        --highlight-color: #a0dfd6;
+        --hover-highlight-color: #9dffff;
+        --dark-primary-bg-color: #1d1d1b;
+        --dark-primary-text-color: #f7f7f7;
+        --dark-highlight-color: #3d5afe;
+        --dark-hover-highlight-color: #536dfe;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: 	#fffff0;
+        background-size: cover;
+        background-position: center;
+      }
+
+      body[data-theme="dark"] {
+        background-color: var(--dark-primary-bg-color);
+        color: var(--dark-primary-text-color);
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: 	#fffff0;
+        color: #1d1d1b;
+        padding: 1px;
+      }
+
+      body[data-theme="dark"] .nav li a {
+        color: var(--dark-primary-text-color);
+      }
+
+      body[data-theme="dark"] .nav li a:hover {
+        color: var(--dark-hover-highlight-color);
+      }
+
+      .logo a [data-theme="dark"] {
+        color: var(--dark-primary-text-color);
+      }
+
+      body[data-theme="dark"] .header {
+        background-color: var(--dark-primary-bg-color);
+      }
+
+      .logo {
+        width: 100px;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        width: 100px;
+        height: 100px;
+        height: auto;
+      }
+      .logo img:hover{
+        transform: scale(1.1);
+      }
+
+      .logo a {
+        margin-left: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--primary-text-color);
+      }
+
+      .nav {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav li {
+        margin: 0 15px;
+      }
+
+      .nav li a {
+        color: var(--primary-text-color);
+        text-decoration: none;
+        transition: color 0.5s ease;
+      }
+
+      body[data-theme="dark"] .nav li a {
+        color: var(--dark-primary-text-color);
+      }
+
+      body[data-theme="dark"] .service-container h2 {
+        color: var(--dark-primary-text-color);
+      }
+
+      body[data-theme="dark"] .service-container p {
+        color: var(--dark-primary-text-color);
+      }
+
+      body[data-theme="dark"] .service-card {
+        background-color: grey;
+      }
+
+      body[data-theme="dark"] .header a {
+        color:  #f7f7f7;
+        font-weight: bold;
+      }
+
+      .nav li a:hover {
+        cursor: pointer;
+        color: var(--hover-highlight-color);
+        transform: scale(2.1);
+      }
+
+
+      .search {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .search input[type="text"] {
+        padding: 10px;
+        width: 60%;
+        font-size: 17px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .service-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+        opacity: 95%;
+      }
+
+      .service-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        width: 30%;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s;
+      }
+
+      .service-card:hover {
+        transform: scale(1.02);
+      }
+
+      .service-card h2 {
+        color: #1d1d1b;
+      }
+
+      .service-card p {
+        color: #666;
+      }
+
+      .service-card .price {
+        color: #1dbf73;
+        font-size: 24px;
+        margin: 10px 0;
+      }
+
+      .service-card .button {
+        display: inline-block;
+        color: #fff;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s;
+      }
+
+      .service-card .button.add-to-cart {
+        background-color: #3d5afe;
+      }
+
+      .service-card .button.add-to-cart:hover {
+        background-color: #1dbf73;
+      }
+
+      .service-card .button.learn-more {
+        background-color: #1d1d1b;
+      }
+
+      .service-card .button.learn-more:hover {
+        background-color: #0b0b0b;
+      }
+
+      .dark-mode-toggle {
+        background-color: var(--highlight-color);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 28px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .dark-mode-toggle:hover {
+        background-color: var(--hover-highlight-color);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="homepage.html"
+        ><img src="logo.png" alt="Project Pivot Icon"
+      /></a>
+      <a href="homepage.html">Project Pivot</a>
+      </div>
+      <ul class="nav">
+        <li><a href="homepage.html">Homepage</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="cart.html">View Cart</a></li>
+        <li>
+          <button class="dark-mode-toggle">🌙</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="search">
+      <input
+        type="text"
+        placeholder="Search for a service..."
+        id="searchInput"
+      />
+    </div>
+
+    <div class="service-container">
+      <div class="service-card">
+        <h2></h2>
+        <p></p>
+        <p class="price"></p>
+        <a href="#" class="button add-to-cart">Add to Cart</a>
+        <a href="#" class="button learn-more">Learn More</a>
+      </div>
+    </div>
+    <script>
+      var serviceObj;
+
+      // Call JSON file.
+      function getServicesAJAX() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            processResult(xhttp);
+            displayServices(); // Call the function to display services after fetching the JSON data
+          }
+        };
+        xhttp.open("GET", "service.json", true);
+        xhttp.send();
+      }
+
+      // This function processes the content of the JSON file.
+      function processResult(xhttp) {
+        var jsonText = xhttp.responseText;
+        serviceObj = JSON.parse(jsonText);
+        displayServices(); // Call the function to display services after fetching the JSON data
+      }
+
+      // Function to display services
+      function displayServices() {
+        var searchInput = document.getElementById("searchInput");
+        var serviceContainer = document.querySelector(".service-container");
+
+        // Clear existing services
+        serviceContainer.innerHTML = "";
+
+        // Filter services based on search input
+        var searchTerm = searchInput.value.toLowerCase();
+        var filteredServices = serviceObj.filter(function (service) {
+          return service.service_name.toLowerCase().includes(searchTerm);
+        });
+
+        // Check if there are no services to display
+        if (filteredServices.length === 0) {
+          var message = document.createElement("p");
+          message.textContent = "Service currently not available";
+          message.style.fontWeight = "bold";
+          serviceContainer.appendChild(message);
+        } else {
+          // Loop through filtered services and create service cards
+          filteredServices.forEach(function (service) {
+            var serviceCard = document.createElement("div");
+            serviceCard.className = "service-card";
+
+            var h2 = document.createElement("h2");
+            h2.textContent = service.service_name;
+
+            var p = document.createElement("p");
+            p.textContent = service.description;
+
+            var price = document.createElement("p");
+            price.className = "price";
+            price.textContent = service.price;
+
+            var addToCartBtn = document.createElement("a");
+            addToCartBtn.href = "#";
+            addToCartBtn.className = "button add-to-cart";
+            addToCartBtn.textContent = "Add to Cart";
+
+            var learnMoreBtn = document.createElement("a");
+            learnMoreBtn.href = "#";
+            learnMoreBtn.className = "button learn-more";
+            learnMoreBtn.textContent = "Learn More";
+
+            serviceCard.appendChild(h2);
+            serviceCard.appendChild(p);
+            serviceCard.appendChild(price);
+            serviceCard.appendChild(addToCartBtn);
+            serviceCard.appendChild(learnMoreBtn);
+
+            serviceContainer.appendChild(serviceCard);
+          });
+        }
+      }
+
+      // Add event listener to search input
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", displayServices);
+
+      // Fetch services on page load
+      getServicesAJAX();
+
+      document
+        .querySelector(".dark-mode-toggle")
+        .addEventListener("click", function () {
+          if (document.body.getAttribute("data-theme") === "light") {
+            document.body.setAttribute("data-theme", "dark");
+          } else {
+            document.body.setAttribute("data-theme", "light");
+          }
+        });
+    </script>
+  </body>
+</html>

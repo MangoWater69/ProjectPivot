@@ -1,0 +1,117 @@
+[
+  {
+      "service_name": "Website Design",
+      "price": "$100",
+      "description": "Get a professionally designed website tailored to your needs. Our team of experts will create a stunning and user-friendly website that represents your brand."
+  },
+  {
+      "service_name": "Logo Design",
+      "price": "$50",
+      "description": "Stand out from the crowd with a unique and memorable logo. Our designers will craft a visually appealing logo that captures the essence of your business."
+  },
+  {
+      "service_name": "Social Media Marketing",
+      "price": "$200",
+      "description": "Boost your online presence with effective social media marketing strategies. We will help you reach your target audience and drive engagement and conversions."
+  },
+  {
+      "service_name": "Content Writing",
+      "price": "$30",
+      "description": "Engage your audience with high-quality and engaging content. Our professional writers will create compelling articles, blog posts, and website copy for your business."
+  },
+  {
+      "service_name": "Mobile App Development",
+      "price": "$500",
+      "description": "Transform your ideas into functional mobile applications. Our experienced developers will build intuitive and feature-rich apps for iOS and Android platforms."
+  },
+  {
+      "service_name": "SEO Optimization",
+      "price": "$150",
+      "description": "Improve your website's visibility in search engine results and drive organic traffic. Our SEO experts will optimize your website for better rankings and increased visibility."
+  },
+  {
+      "service_name": "Graphic Design",
+      "price": "$80",
+      "description": "Enhance your brand's visual identity with stunning graphic designs. Our designers will create captivating visuals for your marketing materials and digital assets."
+  },
+  {
+      "service_name": "E-commerce Development",
+      "price": "$300",
+      "description": "Build a fully functional online store with seamless shopping experiences. Our e-commerce developers will create a secure and user-friendly platform for your products."
+  },
+  {
+      "service_name": "Video Editing",
+      "price": "$50",
+      "description": "Make your videos shine with professional editing techniques. Our editors will refine your footage, add effects, and create visually appealing videos for various purposes."
+  },
+  {
+      "service_name": "Virtual Assistant",
+      "price": "$25",
+      "description": "Get administrative support and save time by hiring a virtual assistant. Our skilled assistants can handle tasks such as scheduling, email management, and data entry."
+  },
+  {
+      "service_name": "Photography",
+      "price": "$150",
+      "description": "Capture your special moments with professional photography services. Our photographers will provide high-quality images for weddings, events, portraits, and more."
+  },
+  {
+      "service_name": "Arabic Tutoring",
+      "price": "$40",
+      "description": "Learn the Arabic language with personalized tutoring sessions. Our experienced tutors will help you improve your speaking, reading, and writing skills."
+  },
+  {
+      "service_name": "French Tutoring",
+      "price": "$35",
+      "description": "Master the French language with dedicated tutoring sessions. Our tutors will provide guidance in grammar, vocabulary, and conversation practice."
+  },
+  {
+      "service_name": "Copywriting",
+      "price": "$60",
+      "description": "Enhance your brand's message with persuasive copywriting. Our skilled writers will craft compelling content for your website, advertisements, and marketing materials."
+  },
+  {
+      "service_name": "Code Assistance",
+      "price": "$50",
+      "description": "Get expert help with coding projects and troubleshooting. Our experienced developers will provide guidance and assistance in various programming languages and frameworks."
+  },
+  {
+      "service_name": "Essay Writing",
+      "price": "$45",
+      "description": "Get high-quality essays written by professional writers. Our team will deliver well-researched and structured essays tailored to your specific requirements."
+  },
+  {
+      "service_name": "Report Writing",
+      "price": "$55",
+      "description": "Receive comprehensive and well-written reports for your academic or professional needs. Our writers will ensure clarity, accuracy, and adherence to the required format."
+  },
+  {
+      "service_name": "Travel Planning",
+      "price": "$75",
+      "description": "Plan your dream vacation with the help of experienced travel planners. Our team will curate itineraries, book accommodations, and arrange transportation for a seamless travel experience."
+  },
+  {
+      "service_name": "Fitness",
+      "price": "$30",
+      "description": "Achieve your fitness goals with personalized training sessions. Our certified fitness instructors will design tailored workout plans and provide guidance for optimal results."
+  },
+  {
+      "service_name": "Photoshop",
+      "price": "$65",
+      "description": "Enhance your photos and unleash your creativity with professional Photoshop editing. Our skilled designers will retouch images, create stunning visual effects, and transform your pictures."
+  },
+  {
+      "service_name": "Logo Animation",
+      "price": "$60",
+      "description": "Make your logo come to life with animated effects. Our designers will create captivating logo animations to enhance your brand's visual presence."
+  },
+  {
+      "service_name": "Business Consulting",
+      "price": "$90",
+      "description": "Get expert advice and guidance for your business growth and strategy. Our consultants will analyze your operations and provide actionable insights."
+  },
+  {
+      "service_name": "Voiceover Services",
+      "price": "$40",
+      "description": "Add a professional voice to your videos, commercials, audiobooks, and more. Our voiceover artists will deliver high-quality recordings that suit your project."
+  }
+]

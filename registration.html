@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Pivot - Registration</title>
+    <style>
+
+      :root {
+        --primary-bg-color: #f7f7f7;
+        --primary-text-color: #1d1d1b;
+        --highlight-color: #a0dfd6;
+        --hover-highlight-color: #9dffff;
+        --dark-primary-bg-color: #1d1d1b;
+        --dark-primary-text-color: #f7f7f7;
+        --dark-highlight-color: #3d5afe;
+        --dark-hover-highlight-color: #536dfe;
+      }
+
+
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: 	#fffff0;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .header h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: 	#fffff0;
+        color: var(--primary-text-color);
+        padding: 1px;
+      }
+
+
+
+      .logo {
+        width: 100px;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        width: 100px;
+        height: 100px;
+        height: auto;
+      }
+      .logo img:hover{
+        transform: scale(1.1);
+      }
+
+      .logo a {
+        margin-left: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--primary-text-color);
+      }
+
+      .logo a [data-theme="dark"] {
+        color: var(--dark-primary-text-color);
+      }
+
+      .dark-mode-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 25px; /* Bigger icon */
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        line-height: 28px;
+        transition: background-color 0.3s ease;
+        background-color: var(--highlight-color);
+        color: #fff;
+      }
+
+      .dark-mode-toggle:hover {
+        transform: scale(1.2);
+      }
+
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+        opacity: 95%;
+        justify-content: center;
+        display: flex;
+      }
+
+      .registration-container{
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        width: 30%;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s;
+      }
+
+      .registration-container label {
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+      }
+
+      .registration-container input[type="text"],
+      .registration-container input[type="password"],
+      .registration-container input[type="email"],
+      .registration-container input[type="tel"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 16px;
+        border-radius: 8px;
+      }
+
+      .registration-container input[type="submit"] {
+        background-color: #3d5afe;
+        color:white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        font-size: 1em;
+        flex: 1;
+      }
+      
+
+      .registration-container input[type="submit"]:hover {
+        background-color: #1dbf73;
+        transform: scale(1.1);
+        color: #fff;
+      }
+
+      body[data-theme="dark"] .header a {
+        color:  #f7f7f7;
+        font-weight: bold;
+      }
+      body[data-theme="dark"] .registration-container {
+        background-color: grey;
+      }
+
+      .dark-mode-toggle:hover {
+        background-color: var(--hover-highlight-color);
+      }
+
+      body[data-theme="dark"] .header {
+        background-color: var(--dark-primary-bg-color);
+      }
+
+      body[data-theme="dark"] .header h1 {
+        background-color: var(--dark-primary-bg-color);
+      }
+
+      body[data-theme="dark"] {
+        background-color: var(--dark-primary-bg-color);
+        color: var(--dark-primary-text-color);
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <div class="header">
+      <div class="logo">
+      <a href="homepage.html"
+      ><img src="logo.png" alt="Project Pivot Icon"
+    /></a>
+    <a href="homepage.html">Project Pivot</a>
+    </div>
+    <h1 
+      style="
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #536dfe;
+      "
+    >
+      Registration
+    </h1>
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+    </div>
+
+
+
+
+
+    <div class="container">
+      <div class="registration-container">
+      <form id="registrationForm" action="/register" method="post">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          pattern="[A-Za-z\s]+"
+          title="Please enter a valid name with only letters and spaces"
+        />
+
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          title="Please enter a valid email address"
+        />
+
+        <label for="country">Nationality:</label>
+        <input
+          type="text"
+          id="country"
+          name="country"
+          required
+          pattern="[A-Za-z\s]+"
+          title="Please enter a valid country name with only letters"
+        />
+
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          pattern="\d+"
+          title="Please enter a valid phone number"
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        />
+
+        <input type="submit" value="Create Account" />
+      </form>
+      </div>
+    </div>
+    <script>
+     
+     document
+        .querySelector(".dark-mode-toggle")
+        .addEventListener("click", function () {
+          if (document.body.getAttribute("data-theme") === "light") {
+            document.body.setAttribute("data-theme", "dark");
+          } else {
+            document.body.setAttribute("data-theme", "light");
+          }
+        });
+
+
+    </script>
+  </body>
+</html>

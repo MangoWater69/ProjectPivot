@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About us</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        transition: background-color 0.3s ease;
+        color: #1d1d1b;
+      }
+
+      body.dark-mode {
+        background-color: #1d1d1b;
+        color: #f7f7f7;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        align-items: center;
+      }
+
+      .project-pivot {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .project-pivot img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      .project-pivot:hover {
+        transform: scale(1.1);
+      }
+
+      .dark-mode-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1d1d1b;
+        color: #f7f7f7;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .dark-mode-button img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .hero {
+        background-color: #f8f8f8;
+        overflow: hidden;
+      }
+
+      .hero.dark-mode,
+      .contact.dark-mode {
+        background-color: #1d1d1b;
+        color: #f7f7f7;
+      }
+
+      .heading h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: 50px;
+        font-family: "Times New Roman", Times, serif;
+        color: #536dfe;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .heading h1.dark-mode {
+        color: #f7f7f7;
+      }
+
+      .containerH {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 65px auto;
+      }
+
+      .hero-content {
+        flex: 1;
+        width: 600px;
+        margin: 0px 25px;
+        animation: fadeInUp 2s ease;
+      }
+
+      .hero-content h2 {
+        text-align: center;
+        font-size: 2.0em;
+        margin-top: 50px;
+        font-family: "Times New Roman", Times, serif;
+        color: #536dfe;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-content p {
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+        color: #667;
+      }
+
+      .hero-content button {
+        background-color: #3d5afe;
+        color:white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        font-size: 1em;
+        flex: 1;
+
+      }
+
+      .hero-content button a{
+        color:#fff;
+      }
+      a {
+        text-decoration: none;
+        }
+
+      .hero-content button:hover {
+        background-color: #1dbf73;
+        transform: scale(1.1);
+        color: #fff;
+      }
+
+      
+
+      .p.dark-mode button {
+        background-color: #333;
+        color: white;
+      }
+
+      .hero-content.dark-mode button:hover {
+        background-color: #444;
+        transform: scale(1.1);
+      }
+
+      .hero-image {
+        flex: 1;
+        width: 600px;
+        margin: auto;
+        animation: fadeInRight 2s ease;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .contact {
+        background-color: #fff;
+        padding: 80px 0;
+        text-align: center;
+        animation: fadeInUp 2s ease;
+      }
+      
+
+      .contact-info {
+        list-style-type: none;
+      }
+
+      .contact h2,
+      .contact ul.contact-info li {
+        color: #333;
+      }
+      .project-pivot a{
+        color: #536dfe;
+      }
+
+      
+
+      .container h2{
+        text-align: center;
+        font-size: 2.0em;
+        margin-top: 50px;
+        font-family: "Times New Roman", Times, serif;
+        color: #536dfe;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="project-pivot">
+        <a href="homepage.html"
+          ><img src="logo.png" alt="Project Pivot Icon"
+        /></a>
+        <a href="homepage.html">Project Pivot</a>
+      </div>
+      <button class="dark-mode-button">
+        <img id="darkModeIcon" src="moon.png" alt="Toggle dark mode" />
+      </button>
+    </div>
+    <section class="hero">
+      <div class="heading">
+        <h1>About Us</h1>
+      </div>
+      <div class="containerH">
+        <div class="hero-content">
+          <h2>Welcome to Project Pivot</h2>
+          <p>
+            We are a team of four computer science students dedicated to web
+            development. With a passion for creating innovative solutions, we
+            have embarked on the journey of designing and improving our website
+            called "Project Pivot." Inspired by platforms like Fiverr, our goal
+            is to provide a platform that connects service providers with
+            customers, offering a seamless experience and empowering individuals
+            to showcase their skills and expertise.
+          </p>
+          <button class="cta-button">
+            <a href="homepage.html">Back to HomePage</a>
+          </button>
+        </div>
+        <div class="hero-image">
+          <img src="aboutuspic.jpg" />
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>
+          Feel free to reach out to us for any inquiries or support. We're here
+          to assist you!
+        </p>
+        <ol class="contact-info">
+          <li>Email: info@projectpivot.com</li>
+          <li>Phone: +123456789</li>
+          <li>Address: 123 Main Street, City, Country</li>
+        </ol>
+      </div>
+    </section>
+    <script>
+      document
+        .querySelector(".dark-mode-button")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("dark-mode");
+          const sections = document.querySelectorAll(".hero, .contact");
+          sections.forEach((section) => {
+            section.classList.toggle("dark-mode");
+          });
+          const darkModeIcon = document.getElementById("darkModeIcon");
+          if (document.body.classList.contains("dark-mode")) {
+            darkModeIcon.setAttribute("src", "n.png");
+          } else {
+            darkModeIcon.setAttribute("src", "l.png");
+          }
+        });
+    </script>
+  </body>
+</html>
